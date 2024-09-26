@@ -1,65 +1,65 @@
-# Automated-Commit
+# 自动提交 Automated-Commit
 
-English | [简体中文](README-zh-CN.md) 
+[English](README-us-EN.md) | 简体中文
 
-This repository contains a GitHub Actions workflow that automatically updates a file named `TIMESTAMP.txt` with the current date and time every 12 hours. This README provides a detailed overview of how the workflow operates and guides you through customizing and using it, especially if you're new to GitHub or GitHub Actions.
+本仓库包含一个 GitHub Actions 工作流，每隔 12 小时会自动更新一个名为 `TIMESTAMP.txt` 的文件，并标注当前日期和时间。如果你是 GitHub 或 GitHub Actions 的新手的话，本 README 将详细介绍该工作流的操作方法，并指导你如何自定义和使用它。
 
-## Overview
+### 概述
 
-The `Automated-Commit` workflow demonstrates the capabilities of GitHub Actions for automating routine tasks within a repository. Specifically, this workflow:
+ `Automated-Commit` 工作流展示了 GitHub Actions 在仓库中自动化常规任务的能力。具体工作流如下：
 
-- Checks out the latest code from the `master` branch.
-- Updates the `TIMESTAMP.txt` file with the current date and time.
-- Commits the change to the repository if any modifications are detected.
-- Pushes the changes back to the `master` branch.
+- 从 `master` 分支检查最新代码。
+- 使用当前日期和时间更新 `TIMESTAMP.txt` 文件。
+- 如果检测到任何修改，则将修改提交到版本库。
+- 将修改推送回 `master` 分支。
 
-## Workflow Structure
+### 工作流程结构
 
-The workflow is defined in the `.github/workflows/master.yml` file and includes:
+工作流程定义在 `.github/workflows/master.yml` 文件中，包括：
 
-- **Triggers**: Configured to run every 12 hours and can be manually triggered via the GitHub UI with the `workflow_dispatch` event.
-- **Jobs and Steps**: Contains a job `update_commit` that runs on the latest Ubuntu runner, performing tasks such as setting up Git, updating `TIMESTAMP.txt`, and committing and pushing changes.
-- **Permissions**: Granted write permissions to the repository contents.
+- **触发器**： 配置为每 12 小时运行一次，可通过 GitHub UI 的 `workflow_dispatch` 事件手动触发。
+- **工作和步骤**： 包含一个 `update_commit` 作业，在最新的 Ubuntu runner 上运行，执行设置 Git、更新 `TIMESTAMP.txt`、提交和推送更改等任务。
+- **权限**： 授予对仓库内容的写入权限。
 
-## Using This Workflow
+### 使用此工作流程
 
-### Creating Your Own Version
+### 创建您自己的版本
 
-To create your own version of this repository and workflow:
+要创建自己仓库和工作流程，请执行以下操作：
 
-1. Click the "Use this template" button on the GitHub repository page.
-2. Choose a name for your new repository and select "Create repository from template".
-3. Clone your new repository to make further customizations locally.
+1. 点击 GitHub 仓库页面上的 “Use this template” 按钮。
+2. 为您的新仓库创建一个名称，然后选择 “Create repository from template” 。
+3. 克隆您的新仓库以便在本地进行进一步自定义。
 
-### Customizing the Workflow
+### 自定义工作流程
 
-Before using the workflow, you'll need to customize it with your GitHub user email and name:
+在使用工作流之前，您需要使用您的 GitHub 用户邮箱和名称进行自定义：
 
-1. Navigate to the `.github/workflows/master.yml` file in your repository.
-2. Edit the file, replacing `"rxmxdhxni@gmail.com"` with your email and `"dante4rt"` with your GitHub username in the `Setup Git Configuration` step.
-3. Commit your changes.
+1. 导航至仓库中的 `.github/workflows/master.yml` 文件。
+2. 编辑该文件，在 `Setup Git Configuration` 步骤中将 `“rxmxdhxni@gmail.com”` 替换为您的电子邮件，将 `“dante4rt”` 替换为您的 GitHub 用户名。
+3. 提交您的更改。
 
-### Viewing Workflow Runs
+### 查看工作流运行
 
-To view the history of workflow runs:
+要查看工作流的运行历史：
 
-1. Navigate to the `Actions` tab of your repository.
-2. Select the `Automated-Commit` workflow to see details of each run.
+1. 导航到您仓库的 `Actions` 标签。
+2. 选择 `Automated-Commit` 工作流以查看每次运行的详细信息。
 
-### Manually Triggering the Workflow
+###手动触发工作流程
 
-You can manually trigger the workflow:
+您可以手动触发工作流：
 
-1. Go to the `Actions` tab of your repository.
-2. Select the `Automated-Commit` workflow.
-3. Click `Run workflow`, select `master`, and click `Run workflow` again.
+1. 前往您仓库的 `Actions` 标签。
+2. 选择 `Automated-Commit` 工作流。
+3. 点击 `Run workflow`，选择 `master`，然后再次点击 `Run workflow`。
 
-## Contributing
+## 贡献
 
-Contributions are welcome! Feel free to fork the repository, make your changes, and submit a pull request.
+欢迎贡献！随时 fork 仓库，进行更改并提交 pull request。
 
-## Support
+## 支持
 
-For issues or questions, please file an issue in the `Issues` section of the repository.
+如有问题或疑问，请在仓库提交 `Issues` 。
 
-Thank you for exploring the Automated-Commit workflow!
+感谢您浏览 自动提交 Automated-Commit workflow！

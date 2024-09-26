@@ -1,5 +1,7 @@
 # 自动提交 Automated-Commit
 
+[English](README.md) | 简体中文
+
 本仓库包含一个 GitHub Actions 工作流，每隔 12 小时会自动更新一个名为 `TIMESTAMP.txt` 的文件，并标注当前日期和时间。如果你是 GitHub 或 GitHub Actions 的新手的话，本 README 将详细介绍该工作流的操作方法，并指导你如何自定义和使用它。
 
 ### 概述
